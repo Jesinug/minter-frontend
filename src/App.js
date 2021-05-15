@@ -10,7 +10,7 @@ function App() {
           Minter
         </h1>
         <a className="Quote">
-          "Everyone is an ignorant, but we all ignore different things"
+          "We are all ignorants, but we all ignore different things"
           <br></br>
           <em>Albert Einstein</em>
         </a>
