@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from './SearchBar';
 import PageHeader from './PageHeader';
+import Announcement from "./AnnouncementForm";
 
 class Board extends React.Component {
     state = {
@@ -10,16 +11,15 @@ class Board extends React.Component {
     render() {
         return (
             <div className="board-wraper">
-            <PageHeader />
-            <SearchBar />
-            <ul>
-                { this.state.announcements.map(announcement => (
-                    <li className="announ-item" key={ announcement.skill }>
-                        <Announcement />
-                    </li>
-                ))}
-            </ul>
-
+                <PageHeader />
+                <SearchBar />
+                <ul>
+                    { this.state.announcements.map(announcement => (
+                        <li className="announ-item" key={ announcement.skill }>
+                            <Announcement />
+                        </li>
+                    ))}
+                </ul>
             </div>
         )
     }

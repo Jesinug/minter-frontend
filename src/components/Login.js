@@ -1,7 +1,7 @@
 import React from 'react';
 import PageHeader from './PageHeader';
-import minterImage from '../API/logo.png';
-import axios from 'axios';
+import minterImage from '../logo.png';
+import AuthService from '../service/auth.services';
 
 class Login extends React.Component {
     constructor() {
@@ -13,7 +13,8 @@ class Login extends React.Component {
     }
     addToData(event){
         event.preventDefault()
-        axios.post(`http://localhost:5000/api/auth/login`, this.state)
+        const auth = new AuthService()
+        auth.login(this.state)
         .then(
         (result) => {
             this.props.history.push('/')
@@ -32,6 +33,17 @@ class Login extends React.Component {
         this.setState({[name]: value});
     }
 
+    checkLoggedIn() {
+        const auth = new AuthService()
+        auth.isLoggedIn()
+        .then(
+            (result) => {
+
+                console.log('is logged in?', result)
+            }
+        )
+    }
+
     render() {
         return(
             <div>
@@ -46,6 +58,7 @@ class Login extends React.Component {
 
                     <button>Submit</button>
                 </form>
+                <button onClick={ this.checkLoggedIn } >Login check</button>
             </div>
         )
     }

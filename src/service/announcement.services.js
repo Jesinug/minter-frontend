@@ -1,11 +1,9 @@
- 
 import axios from 'axios';
 
 export default class AnnoucementService{
   constructor(){
     this.instance = axios.create({
-        //TODO: Fix baseURL path
-      baseURL: `${process.env.REACT_APP_API_URL}/todos`,
+      baseURL: `${process.env.REACT_APP_API_URL}/announcement`,
       withCredentials: true
     })
   }

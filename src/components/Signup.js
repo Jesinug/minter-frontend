@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from './PageHeader';
-import minterImage from '../API/logo.png';
+import minterImage from '../logo.png';
 import axios from 'axios';
 
 class Signup extends React.Component {
@@ -13,6 +13,7 @@ class Signup extends React.Component {
             profilePicture: ""
         }
     }
+    
     addToData(event){
         event.preventDefault()
         axios.post(`http://localhost:5000/api/auth/signup`, this.state)
