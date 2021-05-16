@@ -3,15 +3,10 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 27vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #cccccc;
@@ -21,11 +16,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(12, 79, 180);
+  color: #13586b;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #0010ee;
 }
 
 @keyframes App-logo-spin {
