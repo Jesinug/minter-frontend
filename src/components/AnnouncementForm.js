@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "./PageHeader";
-import minterImage from '../logo.png';
+import logo from '../resources/img/LOGO_MINTER.png';
 import AnnoucementService from '../service/announcement.services';
 
 class AnnouncementForm extends React.Component {
@@ -37,7 +37,7 @@ class AnnouncementForm extends React.Component {
     render() {
         return(
             <div>
-                <PageHeader image={ minterImage } title="Create Announcement" />
+                <PageHeader image={ logo } title="Create Announcement" />
                 <form onSubmit={(e) => {this.addToData(e)}}>
                     <label><b>Skill:</b></label>
                     <input type="text" name="skill" onChange={(e) => {this.handleChange(e)}} />

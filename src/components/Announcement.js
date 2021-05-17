@@ -1,6 +1,4 @@
 import React from "react";
-import PageHeader from "./PageHeader";
-import minterImage from '../logo.png';
 import UserService from '../service/user.services';
 
 class Announcement extends React.Component {

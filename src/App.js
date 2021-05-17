@@ -1,10 +1,8 @@
-
 import './App.css';
 import { Route, Switch } from 'react-router';
 import HomePage from './components/HomePage';
 import React from 'react';
 import Signup from './components/Signup';
-import { Link } from 'react-router-dom';
 import Login from './components/Login';
 import AnnouncementForm from './components/AnnouncementForm';
 import Board from './components/Board';
@@ -12,6 +10,7 @@ import AnonRoute from './routes/AnonRoute';
 import LogoutButton from './components/LogoutButton';
 import { withAuth } from "./context/auth.context";
 import logo from './logo1.png';
+import { Link } from 'react-router-dom';
 
 function App(props) {
   return (

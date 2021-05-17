@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from './PageHeader';
-import minterImage from '../logo.png';
+import logo from '../resources/img/LOGO_MINTER.png';
 import axios from 'axios';
 
 class Signup extends React.Component {
@@ -38,7 +38,7 @@ class Signup extends React.Component {
     render() {
         return(
             <div>
-                <PageHeader image={ minterImage } title="Signup" />
+                <PageHeader image={ logo } title="Signup" />
                 <form onSubmit={(e) => {this.addToData(e)}}>
                     <label><b>Name:</b></label>
                     <input type="text" name="name" onChange={(e) => {this.handleChange(e)}} />
