@@ -2,6 +2,8 @@ import React from 'react';
 import PageHeader from './PageHeader';
 import minterImage from '../logo.png';
 import AuthService from '../service/auth.services';
+import { withAuth } from "../context/auth.context";
+
 
 class Login extends React.Component {
     constructor() {
@@ -13,8 +15,7 @@ class Login extends React.Component {
     }
     addToData(event){
         event.preventDefault()
-        const auth = new AuthService()
-        auth.login(this.state)
+        this.props.login(this.state)
         .then(
         (result) => {
             this.props.history.push('/')
@@ -64,4 +65,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default withAuth(Login);
