@@ -1,5 +1,11 @@
 import React from "react";
-import logo from '../logo1.png';
+import App from '../App';
+import { Link, Route } from "react-router-dom";
+import logo from '../resources/img/LOGO_MINTER.png';
+import Login from "./Login";
+import Signup from "./Signup";
+
+
 
 class HomePage extends React.Component {
     render() {
@@ -7,12 +13,14 @@ class HomePage extends React.Component {
         <div>
             <img src={logo} className="App-logo" alt="logo" />
             <h1>Minter</h1>
-            <p className="Quote">
-                "We are all ignorants, but we all ignore different things"
-                <br></br>
-                <em>Albert Einstein</em>
-            </p>
+            <div>
+            <Link className="py-3 px-3 is-inline-block" to="/signup">Signup</Link>
+            <Link className="py-3 px-3 is-inline-block" to="/login"> Login</Link>
+            {/* <Link className="py-3 px-3 is-inline-block" to="/announcement-form">Announcement Form</Link>
+            <Link className="py-3 px-3 is-inline-block" to="/board">Board</Link> */}
+            </div>
         </div>
+        
         );
     }
 }

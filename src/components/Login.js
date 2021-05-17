@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from './PageHeader';
-import minterImage from '../logo.png';
+import logo from '../resources/img/LOGO_MINTER.png';
 import AuthService from '../service/auth.services';
 
 class Login extends React.Component {
@@ -47,7 +47,7 @@ class Login extends React.Component {
     render() {
         return(
             <div>
-                <PageHeader image={ minterImage } title="Login" />
+                <PageHeader image={ logo } title="Login" />
                 <form onSubmit={(e) => {this.addToData(e)}}>
 
                     <label><b>Email:</b></label>

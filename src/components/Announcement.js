@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "./PageHeader";
-import minterImage from '../logo.png';
+import logo from '../resources/img/LOGO_MINTER.png';
 
 
 class Announcement extends React.Component {
@@ -15,7 +15,7 @@ class Announcement extends React.Component {
     render() {
         return(
             <div className="box">
-                <PageHeader image={ minterImage } title="Create Announcement" />
+                <PageHeader image={ logo } title="Create Announcement" />
                 <div className="media-content">
                         <div className="content">
                             <h2>{this.props.user.name}</h2>
