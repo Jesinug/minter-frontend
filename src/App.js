@@ -10,6 +10,7 @@ import AnonRoute from './routes/AnonRoute';
 import { withAuth } from "./context/auth.context";
 import PrivateRoute from './routes/PrivateRoute';
 import Navbar from './components/Navbar/Navbar';
+import Profile from './components/Profile/Profile';
 
 function App(props) {
   return (
@@ -27,6 +28,7 @@ function App(props) {
         <AnonRoute path="/login" component={ Login } />
         <PrivateRoute path="/announcement-form" component={ AnnouncementForm } />
         <PrivateRoute path="/board" component={ Board } />
+        <PrivateRoute path="/profile" component={ Profile } />
       </Switch>
     </div>
   );

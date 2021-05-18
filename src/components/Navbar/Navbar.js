@@ -10,6 +10,7 @@ class Navbar extends React.Component {
         return(
             <div>
                 <button ><Link className="py-3 px-3 is-inline-block" to="/board">Board</Link></button>
+                <button ><Link className="py-3 px-3 is-inline-block" to="/profile">Profile</Link></button>
                 <LogoutButton />
             </div>
         )
