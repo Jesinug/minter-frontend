@@ -19,7 +19,6 @@ class Announcement extends React.Component {
     render() {
         return(
             <div className="box">
-                {/* <PageHeader image={ minterImage } title="Announcement" /> */}
                 <div className="media-content">
                         <div className="content">
                             <h2>{this.state.user.name}</h2>

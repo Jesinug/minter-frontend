@@ -1,7 +1,7 @@
 import React from "react";
 import AuthService from "../service/auth.services";
 
-const { Consumer, Provider } = React.createContext(); //Consumer: componentes conectar al contexto. Provider: Los datos
+const { Consumer, Provider } = React.createContext();
 
 class AuthProvider extends React.Component {
     state = {
@@ -13,8 +13,7 @@ class AuthProvider extends React.Component {
     authService = new AuthService();
 
     componentDidMount() {
-        //call base data
-        this.authService.isLoggedIn() //Si esta el usuario o no
+        this.authService.isLoggedIn()
         .then((response) => {
             this.setState({ isLoggedIn: true, user: response.data });
         })
@@ -63,17 +62,14 @@ class AuthProvider extends React.Component {
             }}
         >
             {" "}
-            {/* Aquella informacion que va a tener disponible, los que se conecte a este Provider */}
             {this.props.children}
         </Provider>
         );
     }
     }
 
-    //HOC - High Order Component, convierte un componente en un consumer
+    //HOC - High Order Component
     const withAuth = (WrappedComponent) => {
-    //WappedComponent componente a conectar
-
     return function (props) {
         return(
         <Consumer>
@@ -81,8 +77,8 @@ class AuthProvider extends React.Component {
             console.log("render consumer", value)
             return (
             <WrappedComponent
-                {...value} //line 78
-                {...props} //todas las props previas
+                {...value}
+                {...props}
             />
             );
         }}
