@@ -51,7 +51,7 @@ class Profile extends React.Component {
                         </li>
                     ))}
                 </ul>
-                <button onClick={ this.deleteUser } >Delete user</button>
+                <button className="btn-delete-user" onClick={ this.deleteUser } >Delete user</button>
                 <AnnouncementForm />
             </div>
         )

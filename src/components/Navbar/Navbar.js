@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import LogoutButton from '../LogoutButton';
-import logo from './../../resources/img/logo.png'
+import logo from './../../resources/img/logo-bn.png'
+import name from './../../resources/img/Minter.png'
 import './Navbar.css'
 const NavbarBurger = props => (
   <button
@@ -33,7 +34,10 @@ class Navbar extends React.Component {
     return (
       <nav className="navigation is-fixed-top">
         <Link to="/">
+        <div className="brand-navbar-wraper">
           <img src={logo} className="navbar-logo"/>
+          <img src={name} className="navbar-name"/>
+        </div>
         </Link>
         <NavbarBurger
           active={this.state.activeMenu}

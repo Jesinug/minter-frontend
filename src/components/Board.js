@@ -41,7 +41,7 @@ class Board extends React.Component {
         <div className="board-wraper">
             <PageHeader />
             <SearchBar onSearch={this.handleSearch} />
-            <ul>
+            <ul className="announcements-board">
             {this.state.filteredAnnouncements.map((announcement) => (
                 <li className="announ-item" key={announcement.skill}>
                 <Announcement

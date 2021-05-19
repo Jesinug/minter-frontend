@@ -3,17 +3,22 @@
 }
 
 .App-logo {
-  height: 22vmin;
+  height: 51vmin;
+  pointer-events: none;
+}
+
+.App-logo {
+  height: 32vmin;
   pointer-events: none;
 }
 
 .home-page {
-  background-image: linear-gradient(380deg, #616059, #aaa491, #dce0ab, #cde0ab, #caf5e7, #cce4f1, #91c3df);
+  background-image: linear-gradient(400deg, #bc8ac0, #dbc0cd, #d4a875, #ffc966, #caf5e7, #cce4f1, #256991);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 700px;;
+  height: 700px;
   font-size: calc(10px + 2vmin);
   color: #67D29F;
 }
@@ -22,14 +27,6 @@
   color: white;
 }
 
-.App-logo {
-  height: 32vmin;
-  pointer-events: none;
-}
-
-h1 {
-  font-size: 50px;
-}
 
 .link-wraper {
   display: flex;
@@ -37,21 +34,13 @@ h1 {
   width: 40vh;
   justify-content: space-around;
   padding: 50px 10px;
-
-}
-
-.brand-wraper {
-  display: flex;
-  flex-direction: column;
-  justify-content: ;
-  width: 91px;
 }
 
 .link-wraper > .link {
   text-decoration: none;
   color: black;
   padding: 14px 30px;
-  border: black solid 0.5px;
+  border: black solid 1.5px;
   border-radius: 8px;
 }
 
@@ -65,7 +54,6 @@ form {
 .label {
 padding-bottom: 3px;
 padding-top: 10px;
-color: ;
 }
 
 .input {
@@ -76,7 +64,7 @@ border-radius: 2px;;
 line-height: 22px;
 }
 
-button {
+.form > button {
   border-style: none;
   padding: 10px 40px;
   margin: 15px;
@@ -86,5 +74,62 @@ button {
   font-size: 15px;
 }
 
+.navigation
+.navbar-name {
+  height: 19px;
+}
 
+.navbar-logo {
+  height: 39px;
+  width: 36px;
+  margin-left: 9px;
+}
+
+.brand-navbar-wraper {
+  display: flex;
+  flex-direction: column;
+  height: 65px;
+  align-items: center;
+}
+
+.board-wraper {
+  background-image: linear-gradient(400deg, #bc8ac0, #dbc0cd, #d4a875, #ffc966, #caf5e7, #cce4f1, #256991);
+  display: flex;
+  flex-flow: row wrap;  
+  align-items: center;
+  justify-content: space-evenly;
+  height: 700px;
+  font-size: calc(10px + 2vmin);
+  color: #000000;
+}
+
+.announcement-board {
+  background-image: linear-gradient(400deg, #bc8ac0, #dbc0cd, #d4a875, #ffc966, #caf5e7, #cce4f1, #256991);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 700px;
+  font-size: calc(10px + 2vmin);
+  color: #000000;
+}
+
+
+.media-content {
+  list-style: none;
+  text-decoration: none;
+}
+
+.content {
+width: 288px;
+font-size: calc(10px + 2vmin);
+}
+
+Link .btn-delete-user {
+  background-color: transparent;
+  border-color: rgb(189, 24, 24);
+  color: rgb(189, 24, 24);
+  font-weight: bolder;
+  box-shadow: #000000;
+}
 
