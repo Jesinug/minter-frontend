@@ -47,11 +47,13 @@ class Profile extends React.Component {
                             skill={ announcement.skill } 
                             description={ announcement.description } 
                             onAnnouncementDelete={ this.getAnnouncements }
+                            onAnnouncementUpdate={ this.getAnnouncements }
                             />
                         </li>
                     ))}
                 </ul>
-                <button onClick={ this.deleteUser } >Delete user</button>
+                <button onClick={ this.deleteUser } >Delete User</button>
+                <button > Edit User</button>
             </div>
         )
     }
