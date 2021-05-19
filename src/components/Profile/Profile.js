@@ -2,14 +2,15 @@ import React from "react";
 import Announcement from "../Announcement";
 import PageHeader from "../PageHeader";
 import UserService from '../../service/user.services';
-import AnnouncementForm from "../AnnouncementForm";
 import { Link } from "react-router-dom";
 import { withAuth } from '../../context/auth.context';
+import Signup from "../Signup";
 
 class Profile extends React.Component {
     state = {
         announcements: [ ],
-        user: {}
+        user: {},
+        showProfileForm: false
     }
 
     componentDidMount() {
@@ -53,7 +54,9 @@ class Profile extends React.Component {
                     ))}
                 </ul>
                 <button onClick={ this.deleteUser } >Delete User</button>
-                <button > Edit User</button>
+                <button onClick={ () => this.setState({ showProfileForm: !this.state.showProfileForm }) }>Edit User</button>
+                { this.state.showProfileForm && <Signup user={ this.props.user }/> }
+                
             </div>
         )
     }
