@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.label {
+padding-bottom: 3px;
+padding-top: 10px;
+color: ;
+}
+
+.input {
+background-color: #d4a50936;
+border-style: none;
+border: #d4a509cb 0.6px solid;
+border-radius: 2px;;
+line-height: 22px;
+}
+
+button {
+    border-style: none;
+    padding: 10px 40px;
+    margin: 15px;
+    border-radius: 8px;
+    border: #d4a509cb 0.9px solid;
+    background-color: #d4a509cb;
+    font-size: 15px;
+}

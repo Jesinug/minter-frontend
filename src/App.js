@@ -15,14 +15,14 @@ import Profile from './components/Profile/Profile';
 function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
+        
         {
           props.isLoggedIn ? 
           <Navbar />
           :
           <HomePage />
         }
-      </header>
+
       <Switch >
         <AnonRoute path="/signup" component={ Signup } />
         <AnonRoute path="/login" component={ Login } />

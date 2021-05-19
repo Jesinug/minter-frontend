@@ -1,16 +1,24 @@
 import React from "react";
+import HomePageStyled from './HomePage.css';
 import { Link } from "react-router-dom";
-import logo from '../resources/img/LOGO_MINTER.png';
+import logo from '../resources/img/logo.png';
+import minter from '../resources/img/Minter64px.png';
+
 
 class HomePage extends React.Component {
     render() {
         return (
-            <div>
+        <div className="home-page">                
+            <div className="brand-wraper">
                 <img src={logo} className="App-logo" alt="logo" />
-                    <h1>Minter</h1>
-                    <Link className="py-3 px-3 is-inline-block" to="/signup">Signup</Link>
-                    <Link className="py-3 px-3 is-inline-block" to="/login"> Login</Link>
+                <img src={minter} className="App-name" alt="name-app-minter" />
+                {/* <h1>Minter</h1> */}
             </div>
+                <div className="link-wraper">
+                <Link className="link" to="/signup">Signup</Link>
+                <Link className="link" to="/login"> Login</Link>
+                </div>                    
+        </div>
         );
     }
 }

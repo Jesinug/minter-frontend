@@ -1,0 +1,25 @@
+.App-logo {
+    height: 32vmin;
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.link-wraper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 40vh;
+    justify-content: space-around;
+    padding: 50px 10px;
+
+  }
+
+.link-wraper > a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 30px;
+    border: white solid 0.5px;
+    border-radius: 8px;
+}

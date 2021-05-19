@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import LogoutButton from '../LogoutButton';
-import logo from './../../resources/img/LOGO_MINTER.png'
+import logo from './../../resources/img/logo.png'
 import './Navbar.css'
 const NavbarBurger = props => (
   <button

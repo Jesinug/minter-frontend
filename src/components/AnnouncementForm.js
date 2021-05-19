@@ -38,11 +38,11 @@ class AnnouncementForm extends React.Component {
             <div>
                 <PageHeader image={ logo } title="Create Announcement" />
                 <form onSubmit={(e) => {this.addToData(e)}}>
-                    <label><b>Skill:</b></label>
-                    <input type="text" name="skill" onChange={(e) => {this.handleChange(e)}} />
+                    <label className="label"><b>Skill:</b></label>
+                    <input className="input" type="text" name="skill" onChange={(e) => {this.handleChange(e)}} />
 
-                    <label><b>Description:</b></label>
-                    <input type="text" name="description" onChange={(e) => {this.handleChange(e)}} />
+                    <label className="label"><b>Description:</b></label>
+                    <input className="input" type="text" name="description" onChange={(e) => {this.handleChange(e)}} />
 
                     <button>Create</button>
                 </form>
