@@ -1,5 +1,8 @@
 import React from "react";
 import UserService from '../service/user.services';
+import ContactButton from './ContactButton';
+import { withAuth } from '../context/auth.context';
+import AnnouncementService from '../service/announcement.services';
 
 class Announcement extends React.Component {
     state = {
@@ -9,11 +12,15 @@ class Announcement extends React.Component {
     componentDidMount() {
         new UserService().getOne(this.props.userId)
         .then((response) => {
-            console.log(response)
             this.setState({
                 user : response.data || {}
             })
         })
+    }
+
+    deleteAnnouncement = () => {
+        new AnnouncementService().deleteOne(this.props.id)
+        .then( () => { this.props.onAnnouncementDelete() } )
     }
 
     render() {
@@ -27,6 +34,9 @@ class Announcement extends React.Component {
                             <strong>{ this.props.skill }</strong> <br />
                             <small>{ this.props.description } </small>
                             </p>
+                            { this.state.user.id !== this.props.user.id && <ContactButton email={ this.state.user.email }/>}
+                            <button>Edit</button>
+                            <button onClick={ this.deleteAnnouncement }>Delete</button>
                         </div>
                     </div>
             </div>
@@ -34,4 +44,4 @@ class Announcement extends React.Component {
     } 
 }
 
-export default Announcement;
+export default withAuth(Announcement);

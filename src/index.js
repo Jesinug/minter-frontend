@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,6 +7,11 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './context/auth.context';
 require('dotenv').config();
+
+window.axios = axios.create({
+  baseURL: `${process.env.REACT_APP_API_URL}`,
+  withCredentials: true
+})
 
 ReactDOM.render(
   <React.StrictMode>

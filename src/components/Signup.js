@@ -1,7 +1,5 @@
 import React from 'react';
-import PageHeader from './PageHeader';
-import logo from '../resources/img/LOGO_MINTER.png';
-import axios from 'axios';
+import { withAuth } from "../context/auth.context";
 
 class Signup extends React.Component {
     constructor() {
@@ -16,10 +14,10 @@ class Signup extends React.Component {
     
     addToData(event){
         event.preventDefault()
-        axios.post(`http://localhost:5000/api/auth/signup`, this.state)
+        this.props.signup(this.state)
         .then(
         (result) => {
-            this.props.history.push('/')
+            this.props.history.push('/board')
         },
 
         (error) => {
@@ -38,7 +36,6 @@ class Signup extends React.Component {
     render() {
         return(
             <div>
-                <PageHeader image={ logo } title="Signup" />
                 <form onSubmit={(e) => {this.addToData(e)}}>
                     <label><b>Name:</b></label>
                     <input type="text" name="name" onChange={(e) => {this.handleChange(e)}} />
@@ -59,4 +56,4 @@ class Signup extends React.Component {
     }
 }
 
-export default Signup;
+export default withAuth(Signup);

@@ -1,46 +1,59 @@
 import React from "react";
-import SearchBar from './SearchBar';
-import PageHeader from './PageHeader';
-import AnnoucementService from '../service/announcement.services';
+import SearchBar from "./SearchBar";
+import PageHeader from "./PageHeader";
+import AnnoucementService from "../service/announcement.services";
 import Announcement from "./Announcement";
-import ContactButton from "./ContactButton";
 
 class Board extends React.Component {
     state = {
-        announcements: [ ]
-    }
+        announcements: [],
+        filteredAnnouncements: [],
+    };
 
     componentDidMount() {
-        new AnnoucementService().get()
-        .then((response) => {
-            this.setState({
-                announcements: response.data
-            })
-        })
+        new AnnoucementService().get().then((response) => {
+        this.setState({
+            announcements: response.data,
+            filteredAnnouncements: response.data
+        });
+        });
     }
 
-    alert() {
-        return (
-            
-            console.log(this.props.user.email)
-        )
-    }
+    handleSearch = (search) => {
+        if (!search) {
+        this.setState({
+            filteredAnnouncements: this.state.announcements
+        });
+        } else {
+        const filteredAnnouncements = this.state.announcements.filter(
+            (announcement) => {
+            return announcement.skill
+                .toLowerCase()
+                .includes(search.toLowerCase());
+            }
+        );
+        this.setState({ filteredAnnouncements: filteredAnnouncements });
+        }
+    };
 
     render() {
         return (
-            <div className="board-wraper">
-                <PageHeader />
-                <SearchBar />
-                <ul>
-                    { this.state.announcements.map(announcement => (
-                        <li className="announ-item" key={ announcement.skill }>
-                            <Announcement userId={ announcement.userId } skill={ announcement.skill } description={ announcement.description } />
-                            <ContactButton />
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        )
+        <div className="board-wraper">
+            <PageHeader />
+            <SearchBar onSearch={this.handleSearch} />
+            <ul>
+            {this.state.filteredAnnouncements.map((announcement) => (
+                <li className="announ-item" key={announcement.skill}>
+                <Announcement
+                    userId={announcement.userId}
+                    skill={announcement.skill}
+                    description={announcement.description}
+                />
+                </li>
+            ))}
+            </ul>
+        </div>
+        );
     }
 }
 

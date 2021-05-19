@@ -17,8 +17,7 @@ class AnnouncementForm extends React.Component {
         new AnnoucementService().create(this.state)
         .then(
         (result) => {
-            console.log(result)
-            this.props.history.push('/')
+            this.props.history.push('/profile')
         },
 
         (error) => {

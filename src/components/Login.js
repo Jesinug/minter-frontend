@@ -1,7 +1,4 @@
 import React from 'react';
-import PageHeader from './PageHeader';
-import logo from '../resources/img/LOGO_MINTER.png';
-import AuthService from '../service/auth.services';
 import { withAuth } from "../context/auth.context";
 
 
@@ -18,7 +15,7 @@ class Login extends React.Component {
         this.props.login(this.state)
         .then(
         (result) => {
-            this.props.history.push('/')
+            this.props.history.push('/board')
         },
 
         (error) => {
@@ -34,21 +31,10 @@ class Login extends React.Component {
         this.setState({[name]: value});
     }
 
-    checkLoggedIn() {
-        const auth = new AuthService()
-        auth.isLoggedIn()
-        .then(
-            (result) => {
-
-                console.log('is logged in?', result)
-            }
-        )
-    }
-
     render() {
         return(
             <div>
-                <PageHeader image={ logo } title="Login" />
+                {/* <PageHeader image={ logo } title="Login" /> */}
                 <form onSubmit={(e) => {this.addToData(e)}}>
 
                     <label><b>Email:</b></label>
@@ -59,7 +45,6 @@ class Login extends React.Component {
 
                     <button>Submit</button>
                 </form>
-                <button onClick={ this.checkLoggedIn } >Login check</button>
             </div>
         )
     }

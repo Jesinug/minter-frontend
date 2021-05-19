@@ -26,7 +26,7 @@ class AuthProvider extends React.Component {
     }
 
     signup = (data) => {
-        this.authService
+        return this.authService
         .signup(data)
         .then((response) => this.setState({ isLoggedIn: true, user: response.data }))
         .catch(() => this.setState({ isLoggedIn: false, user: null }));
@@ -39,7 +39,7 @@ class AuthProvider extends React.Component {
     };
 
     logout = () => {
-        this.authService
+        return this.authService
         .logout()
         .then((user) => this.setState({ isLoggedIn: false, user: null }))
         .catch((error) => console.error(error));
@@ -74,7 +74,6 @@ class AuthProvider extends React.Component {
         return(
         <Consumer>
         {(value) => {
-            console.log("render consumer", value)
             return (
             <WrappedComponent
                 {...value}
