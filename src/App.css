@@ -18,7 +18,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 700px;
+  min-height: 100vh;
+  background-size: cover;
   font-size: calc(10px + 2vmin);
   color: #67D29F;
 }
@@ -34,6 +35,12 @@
   width: 40vh;
   justify-content: space-around;
   padding: 50px 10px;
+}
+
+.page-header img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
 }
 
 .link-wraper > .link {

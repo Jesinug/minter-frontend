@@ -33,7 +33,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="navigation is-fixed-top">
-        <Link to="/">
+        <Link to="/board">
         <div className="brand-navbar-wraper">
           <img src={logo} className="navbar-logo"/>
           <img src={name} className="navbar-name"/>

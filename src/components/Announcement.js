@@ -3,6 +3,7 @@ import UserService from '../service/user.services';
 import ContactButton from './ContactButton';
 import { withAuth } from '../context/auth.context';
 import AnnouncementService from '../service/announcement.services';
+import { Link } from "react-router-dom";
 
 class Announcement extends React.Component {
     state = {
@@ -23,6 +24,11 @@ class Announcement extends React.Component {
         .then( () => { this.props.onAnnouncementDelete() } )
     }
 
+    editAnnouncement = () => {
+        new AnnouncementService().updateOne(this.props.id)
+        .then ( () => { this.props.onAnnouncementUpdate() })
+    }
+
     render() {
         return(
             <div className="box">
@@ -35,8 +41,14 @@ class Announcement extends React.Component {
                             <small>{ this.props.description } </small>
                             </p>
                             { this.state.user.id !== this.props.user.id && <ContactButton email={ this.state.user.email }/>}
-                            <button className="btn-edit-announcement">Edit</button>
-                            <button className="btn-delete-announcement" onClick={ this.deleteAnnouncement }>Delete</button>
+                       
+                            {
+                            this.props.user.id === this.state.user.id && 
+                            <div>
+                                {/* <Link className="py-3 px-3 is-inline-block" to={`/announcement-form/${this.props.id}`}><button>Edit</button></Link> */}
+                                <button className="btn-delete-announcement" onClick={ this.deleteAnnouncement }>Delete Announcement</button>
+                            </div>
+                            }
                         </div>
                     </div>
             </div>

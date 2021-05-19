@@ -1,8 +1,10 @@
 import React from "react";
-import HomePageStyled from './HomePage.css';
 import { Link } from "react-router-dom";
 import logo from '../resources/img/logo-bn.png';
 import minter from '../resources/img/Minter64px.png';
+import AnonRoute from "../routes/AnonRoute";
+import Signup from "./Signup";
+import Login from "./Login";
 
 
 class HomePage extends React.Component {
@@ -15,8 +17,10 @@ class HomePage extends React.Component {
             
 
                 <div className="link-wraper">
-                <Link className="link" to="/signup">Signup</Link>
-                <Link className="link" to="/login"> Login</Link>
+                    <AnonRoute path="/signup" component={ Signup } />
+                    <AnonRoute path="/login" component={ Login } />
+                    <Link className="link" to="/signup">Signup</Link>
+                    <Link className="link" to="/login"> Login</Link>
                 </div>                    
         </div>
         );

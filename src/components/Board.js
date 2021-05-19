@@ -39,7 +39,7 @@ class Board extends React.Component {
     render() {
         return (
         <div className="board-wraper">
-            <PageHeader />
+            <PageHeader title="BOARD" image="https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"/>
             <SearchBar onSearch={this.handleSearch} />
             <ul className="announcements-board">
             {this.state.filteredAnnouncements.map((announcement) => (

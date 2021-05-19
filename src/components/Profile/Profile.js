@@ -2,14 +2,15 @@ import React from "react";
 import Announcement from "../Announcement";
 import PageHeader from "../PageHeader";
 import UserService from '../../service/user.services';
-import AnnouncementForm from "../AnnouncementForm";
 import { Link } from "react-router-dom";
 import { withAuth } from '../../context/auth.context';
+import Signup from "../Signup";
 
 class Profile extends React.Component {
     state = {
         announcements: [ ],
-        user: {}
+        user: {},
+        showProfileForm: false
     }
 
     componentDidMount() {
@@ -36,7 +37,7 @@ class Profile extends React.Component {
     render() {
         return (
             <div className="profile-wraper">
-                <PageHeader />
+                <PageHeader title="PROFILE" image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
                 <Link className="py-3 px-3 is-inline-block" to="/announcement-form">Create Announcement</Link>
                 <ul>
                     { this.state.announcements.map(announcement => (
@@ -47,12 +48,15 @@ class Profile extends React.Component {
                             skill={ announcement.skill } 
                             description={ announcement.description } 
                             onAnnouncementDelete={ this.getAnnouncements }
+                            onAnnouncementUpdate={ this.getAnnouncements }
                             />
                         </li>
                     ))}
                 </ul>
-                <button className="btn-delete-user" onClick={ this.deleteUser } >Delete user</button>
-                <AnnouncementForm />
+                <button className="btn-delete-user" onClick={ this.deleteUser } >Delete User</button>
+                <button onClick={ () => this.setState({ showProfileForm: !this.state.showProfileForm }) }>Edit User</button>
+                { this.state.showProfileForm && <Signup user={ this.props.user }/> }
+                
             </div>
         )
     }
