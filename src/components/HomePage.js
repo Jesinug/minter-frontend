@@ -7,9 +7,9 @@ class HomePage extends React.Component {
         return (
             <div>
                 <img src={logo} className="App-logo" alt="logo" />
-                    <h1>Minter</h1>
-                    <Link className="py-3 px-3 is-inline-block" to="/signup">Signup</Link>
-                    <Link className="py-3 px-3 is-inline-block" to="/login"> Login</Link>
+                <h1>Minter</h1>
+                <Link className="py-3 px-3 is-inline-block" to="/signup">Signup</Link>
+                <Link className="py-3 px-3 is-inline-block" to="/login"> Login</Link>
             </div>
         );
     }

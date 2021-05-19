@@ -32,8 +32,8 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="navigation is-fixed-top">
-        <Link to="/">
-          <img src={logo} className="navbar-logo"/>
+        <Link className="py-3 px-3 is-inline-block" to="/board">
+          <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <NavbarBurger
           active={this.state.activeMenu}

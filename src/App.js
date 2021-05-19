@@ -24,6 +24,7 @@ function App(props) {
           <HomePage />
         }
       </header>
+      
       <Switch >
         <AnonRoute path="/signup" component={ Signup } />
         <AnonRoute path="/login" component={ Login } />

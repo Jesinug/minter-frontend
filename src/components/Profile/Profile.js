@@ -36,7 +36,7 @@ class Profile extends React.Component {
     render() {
         return (
             <div className="profile-wraper">
-                <PageHeader />
+                <PageHeader title="PROFILE" image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
                 <Link className="py-3 px-3 is-inline-block" to="/announcement-form">Create Announcement</Link>
                 <ul>
                     { this.state.announcements.map(announcement => (
@@ -52,7 +52,6 @@ class Profile extends React.Component {
                     ))}
                 </ul>
                 <button onClick={ this.deleteUser } >Delete user</button>
-                <AnnouncementForm />
             </div>
         )
     }

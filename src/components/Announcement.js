@@ -35,8 +35,15 @@ class Announcement extends React.Component {
                             <small>{ this.props.description } </small>
                             </p>
                             { this.state.user.id !== this.props.user.id && <ContactButton email={ this.state.user.email }/>}
-                            <button>Edit</button>
-                            <button onClick={ this.deleteAnnouncement }>Delete</button>
+                            {
+                            this.props.user.id === this.state.user.id && 
+                            <div>
+                                <button>Edit</button>
+                                <button onClick={ this.deleteAnnouncement }>Delete</button>
+                            </div>
+                            
+                            }
+                            
                         </div>
                     </div>
             </div>
