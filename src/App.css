@@ -3,23 +3,48 @@
 }
 
 .App-logo {
-  height: 9vmin;
+  height: 22vmin;
   pointer-events: none;
 }
 
-
-.App-header {
-  background-color: #ffffff;
+.home-page {
+  background-image: linear-gradient(380deg, #616059, #aaa491, #dce0ab, #cde0ab, #caf5e7, #cce4f1, #91c3df);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  height: 700px;;
   font-size: calc(10px + 2vmin);
-  color: #13586b;
+  color: #67D29F;
 }
 
 .App-link {
-  color: #0010ee;
+  color: white;
+}
+
+.App-logo {
+  height: 32vmin;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.link-wraper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 40vh;
+  justify-content: space-around;
+  padding: 50px 10px;
+
+}
+
+.brand-wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: ;
+  width: 91px;
 }
 
 .page-header img {
@@ -27,4 +52,45 @@
   height: auto;
   max-height: 250px;
 }
+
+.link-wraper > .link {
+  text-decoration: none;
+  color: black;
+  padding: 14px 30px;
+  border: black solid 0.5px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.label {
+padding-bottom: 3px;
+padding-top: 10px;
+color: ;
+}
+
+.input {
+background-color: #aaa491;
+border-style: none;
+border: #aaa491 0.6px solid;
+border-radius: 2px;;
+line-height: 22px;
+}
+
+button {
+  border-style: none;
+  padding: 10px 40px;
+  margin: 15px;
+  border-radius: 8px;
+  border: #d4a509cb 0.9px solid;
+  background-color: #09a5d4cb;
+  font-size: 15px;
+}
+
+
 

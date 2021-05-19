@@ -1,4 +1,5 @@
 import React from 'react';
+import SingupStyled from './Signup.css';
 import { withAuth } from "../context/auth.context";
 
 class Signup extends React.Component {
@@ -37,19 +38,19 @@ class Signup extends React.Component {
         return(
             <div>
                 <form onSubmit={(e) => {this.addToData(e)}}>
-                    <label><b>Name:</b></label>
-                    <input type="text" name="name" onChange={(e) => {this.handleChange(e)}} />
+                    <label className="label"><b>Name:</b></label>
+                    <input className="input" type="text" name="name" onChange={(e) => {this.handleChange(e)}} />
 
-                    <label><b>Email:</b></label>
-                    <input type="email" name="email" onChange={(e) => {this.handleChange(e)}} />
+                    <label className="label"><b>Email:</b></label>
+                    <input className="input" type="email" name="email" onChange={(e) => {this.handleChange(e)}} />
 
-                    <label><b>Password:</b></label>
-                    <input type="password" name="password" onChange={(e) => {this.handleChange(e)}} />
+                    <label className="label"><b>Password:</b></label>
+                    <input className="input" type="password" name="password" onChange={(e) => {this.handleChange(e)}} />
 
-                    <label><b>Profile Picture:</b></label>
-                    <input type="text" name="profilePicture" onChange={(e) => {this.handleChange(e)}} />
+                    <label className="label"><b>Profile Picture:</b></label>
+                    <input className="input" type="text" name="profilePicture" onChange={(e) => {this.handleChange(e)}} />
 
-                    <button>Submit</button>
+                    <button><strong>Submit</strong></button>
                 </form>
             </div>
         )
