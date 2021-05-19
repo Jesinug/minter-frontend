@@ -11,7 +11,7 @@ import { withAuth } from "./context/auth.context";
 import PrivateRoute from './routes/PrivateRoute';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-
+//TEST: Push and pull
 function App(props) {
   return (
     <div className="App">
