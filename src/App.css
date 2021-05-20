@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+    background-image: linear-gradient( 
+400deg
+ , #bc8ac0, #dbc0cd, #d4a875, #ffc966, #caf5e7, #cce4f1, #256991);
+    background-size: cover;
+    min-height: 6000px;
 }
 
 .App-logo {
@@ -21,7 +26,7 @@
   min-height: 100vh;
   background-size: cover;
   font-size: calc(10px + 2vmin);
-  color: #67D29F;
+  color: #224735;
 }
 
 .App-link {
@@ -64,11 +69,11 @@ padding-top: 10px;
 }
 
 .input {
-background-color: #aaa491;
-border-style: none;
-border: #aaa491 0.6px solid;
-border-radius: 2px;;
-line-height: 22px;
+  background-color: #f3ecd7;
+  border-style: none;
+  border: #aaa491 0.6px solid;
+  border-radius: 2px;
+  line-height: 22px;
 }
 
 .form > button {
@@ -100,7 +105,6 @@ line-height: 22px;
 }
 
 .board-wraper {
-  background-image: linear-gradient(400deg, #bc8ac0, #dbc0cd, #d4a875, #ffc966, #caf5e7, #cce4f1, #256991);
   display: flex;
   flex-flow: row wrap;  
   align-items: center;
@@ -128,8 +132,14 @@ line-height: 22px;
 }
 
 .content {
-width: 288px;
-font-size: calc(10px + 2vmin);
+  border: 4px #cbf3e9 solid;
+  border-radius: 16px;
+  background-color: white;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin: 10px;
+  width: 288px;
+  font-size: calc(10px + 2vmin);
 }
 
 Link .btn-delete-user {
@@ -138,5 +148,41 @@ Link .btn-delete-user {
   color: rgb(189, 24, 24);
   font-weight: bolder;
   box-shadow: #000000;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  border: 1px #98b5ae solid;
+  color: black;
+  border-radius: 16px;
+  background-color: #cbf3e9;
+  padding: 6px 35px;
+  margin: 10px;
+  width: 288px;
+  font-size: calc(10px + 2vmin);
+  text-decoration: none;
+}
+
+.submit {
+  border: 1px #98b5ae solid;
+  color: black;
+  background-color: #cbf3e9;
+  padding: 3px 61px;
+  margin: 10px;
+  margin-top: 19px;
+  font-size: calc(10px + 2vmin);
+}
+
+.prueba {
+  border: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  font-size: 0;
+  text-decoration: none;
 }
 

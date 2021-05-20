@@ -44,7 +44,7 @@ class AnnouncementForm extends React.Component {
                     <label className="label"><b>Description:</b></label>
                     <input className="input" type="text" name="description" onChange={(e) => {this.handleChange(e)}} />
 
-                    <button>Create</button>
+                    <button className="submit" >Create</button>
                 </form>
             </div>
         )

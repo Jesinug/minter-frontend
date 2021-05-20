@@ -41,12 +41,11 @@ class Announcement extends React.Component {
                             <small>{ this.props.description } </small>
                             </p>
                             { this.state.user.id !== this.props.user.id && <ContactButton email={ this.state.user.email }/>}
-                       
                             {
                             this.props.user.id === this.state.user.id && 
                             <div>
                                 {/* <Link className="py-3 px-3 is-inline-block" to={`/announcement-form/${this.props.id}`}><button>Edit</button></Link> */}
-                                <button className="btn-delete-announcement" onClick={ this.deleteAnnouncement }>Delete Announcement</button>
+                                <button className="submit" onClick={ this.deleteAnnouncement }>Delete Announcement</button>
                             </div>
                             }
                         </div>

@@ -53,8 +53,8 @@ class Profile extends React.Component {
                         </li>
                     ))}
                 </ul>
-                <button className="btn-delete-user" onClick={ this.deleteUser } >Delete User</button>
-                <button onClick={ () => this.setState({ showProfileForm: !this.state.showProfileForm }) }>Edit User</button>
+                <button className="submit" onClick={ this.deleteUser } >Delete User</button>
+                <button className="submit"onClick={ () => this.setState({ showProfileForm: !this.state.showProfileForm }) }>Edit User</button>
                 { this.state.showProfileForm && <Signup user={ this.props.user }/> }
                 
             </div>

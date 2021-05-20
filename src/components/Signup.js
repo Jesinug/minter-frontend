@@ -60,7 +60,7 @@ class Signup extends React.Component {
                     <label className="label"><b>Profile Picture:</b></label>
                     <input value={ this.state.profilePicture } className="input" type="text" name="profilePicture" onChange={(e) => {this.handleChange(e)}} />
 
-                    <button><strong>Submit</strong></button>
+                    <button className="submit"><strong>Submit</strong></button>
                 </form>
             </div>
         )

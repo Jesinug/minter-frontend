@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import LogoutButton from '../LogoutButton';
 import logo from './../../resources/img/logo-bn.png'
@@ -33,13 +32,17 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="navigation is-fixed-top">
-        <Link to="/board">
+      <div className="logo-button">
+      <Link className="prueba" to="/board">
+      
+        
         <div className="brand-navbar-wraper">
-          <img src={logo} className="navbar-logo"/>
-          <img src={name} className="navbar-name"/>
+          <img src={logo} className="navbar-logo" alt="logo"/>
+          <img src={name} className="navbar-name" alt="logo"/>
         </div>
         </Link>
-        <NavbarBurger
+        </div>
+        <NavbarBurger 
           active={this.state.activeMenu}
           toggleMenu={this.toggleMenu}
         />
