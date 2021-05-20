@@ -186,3 +186,13 @@ a {
   text-decoration: none;
 }
 
+.user-avatar {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+
+button:focus{outline :none;}
+

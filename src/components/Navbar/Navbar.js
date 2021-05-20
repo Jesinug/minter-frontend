@@ -4,11 +4,12 @@ import LogoutButton from '../LogoutButton';
 import logo from './../../resources/img/logo-bn.png'
 import name from './../../resources/img/Minter.png'
 import './Navbar.css'
+
 const NavbarBurger = props => (
   <button
     onClick={props.toggleMenu}
     className={`navbar-button ${props.active ? 'is-active' : ''}`}
-  ></button>
+  >☰</button>
 );
 class Navbar extends React.Component {
   state = {
@@ -40,8 +41,9 @@ class Navbar extends React.Component {
           <img src={logo} className="navbar-logo" alt="logo"/>
           <img src={name} className="navbar-name" alt="logo"/>
         </div>
-        </Link>
-        </div>
+      </Link>
+      </div>
+        
         <NavbarBurger 
           active={this.state.activeMenu}
           toggleMenu={this.toggleMenu}
